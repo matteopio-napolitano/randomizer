@@ -8,3 +8,12 @@ It will generate fastly and with accuracy for you the following type of resource
 * VAT Numbers
 * Street Addresses
 * Bank Account Numbers
+
+# Getting Started
+
+In order to use this tool, you have to clone this project and run the following commands:
+
+```
+$ make setup
+$ make run
+```
