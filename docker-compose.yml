@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  
+  frontend:
+    image: node:10.8.0-alpine
+    environment:
+      - NODE_ENV=development
+    user: "node"
+    working_dir: /home/app
+    volumes:
+      - ./rzr-frontend:/home/app
+    ports:
+      - 4200:4200
+    command: "npm start"
+
+  backend:
+    image: node:10.8.0-alpine
+    environment:
+      - NODE_ENV=development
+    user: "node"
+    working_dir: /home/app
+    volumes:
+      - ./rzr-backend:/home/app
+    ports:
+      - 3000:3000
+    command: "npm run start:dev"
+
+#volumes:
+#  mysqldb_data:

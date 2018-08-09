@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  frontend:
+    image: node:10.8.0-alpine
+    environment:
+      - NODE_ENV=development
+    user: "node"
+    working_dir: /home/app
+    volumes:
+      - ./rzr-frontend:/home/app
+    command: "npm install" # A successful command returns a 0
+
+  backend:
+    image: node:10.8.0-alpine
+    environment:
+      - NODE_ENV=development
+    user: "node"
+    working_dir: /home/app
+    volumes:
+      - ./rzr-backend:/home/app
+    command: "npm install" # A successful command returns a 0
